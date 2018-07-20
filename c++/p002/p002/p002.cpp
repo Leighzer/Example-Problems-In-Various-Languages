@@ -30,11 +30,9 @@ int main() {
 
 	}
 
-	std::cout << sum << "\n";
+	std::cout << "The sum of the even valued fibonacci sequence values below 4 million is: " << sum << std::endl;
 
-	while (true) {
-
-	}
+	std::cin.get();
 
 	return 0;
 
