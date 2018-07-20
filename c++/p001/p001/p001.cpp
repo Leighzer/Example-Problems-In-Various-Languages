@@ -20,7 +20,6 @@ int main() {
 		i++;
 	}
 
-	std::cout << sumx << "\n";
 
 	i = 1;
 	while ((y*i) < 1000) {
@@ -28,7 +27,6 @@ int main() {
 		i++;
 	}
 
-	std::cout << sumy << "\n";
 
 	i = 1;
 	while ((z*i) < 1000) {
@@ -36,11 +34,12 @@ int main() {
 		i++;
 	}
 
-	std::cout << sumz << "\n";
 
 	totalSum = sumx + sumy - sumz;
 
-	std::cout << totalSum;
+	std::cout << "The sum of the multiples of 3 or 5 below 1000 are: " << totalSum << std::endl;
+
+	std::cout << "Press Enter to exit the program.";
 
 	std::cin.get();
 
