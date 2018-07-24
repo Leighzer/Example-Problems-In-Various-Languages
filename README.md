@@ -1,5 +1,5 @@
 # Example Problem Repo
-This repo where I hold my many small example projects to practice coding in different languages and formulating algorithms.
+This repo is where I hold my many small example projects wher I practice coding in different languages and try formulating new algorithms.
 
 # Project-Euler
 This repository also contains my solutions for project euler.
