@@ -1,6 +1,9 @@
+# Example Problem Repo
+This repo where I hold my many small example projects to practice coding in different languages and formulating algorithms.
+
 # Project-Euler
-This is a repository of the project euler math problems I tackle with different languages. The primary goal of this repository is to expand my problem solving skills and my familiarity with other languages.
+This repository also contains my solutions for project euler.
 
 Many of the solutions featured will may be rough code and works in progress. They are by no means what I deem the best possible solution or structure.
 
-I will also try to have my solutions be functions that can take in a wider array of inputs than the single input the problem states.
+Projects with extended in their title mean I have added additional functionality outside of the regular problem specified.
