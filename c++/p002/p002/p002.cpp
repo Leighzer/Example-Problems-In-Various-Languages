@@ -16,7 +16,7 @@ int main() {
 
 	int valueLimit = 4000000;
 
-	while (x < valueLimit && y < valueLimit) {
+	while (y < valueLimit) {
 
 		if (y % 2 == 0) {
 			sum += y;
