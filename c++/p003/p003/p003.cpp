@@ -47,50 +47,37 @@ bool isPrime(long long number) {
 
 int main(int argc, char** argv) {
 
+	
+	long long target = 600851475143;
 
-	//log("Enter the number you want to find the largest prime factor of: ");
-	bool running = true;
-	while (running) {
+	long long searchMax = (long long)ceil(sqrt(target));
 
-		int highRandomWord = rand();
-		int lowRandomWord = rand();
+	long long answer = 1;
 
+	for (long long searchMin = 1; searchMin <= searchMax; searchMin++) {
 
+		if (target % searchMin == 0) {
+			long long otherFactor = target / searchMin;
 
-		long long target = (((long long)highRandomWord) *((long long)pow(2, 32))) + (((long long)lowRandomWord));
+			if (isPrime(otherFactor) && otherFactor > answer) {
+				answer = otherFactor;
+			}
 
-		long long searchMax = (long long)ceil(sqrt(target));
-
-		long long answer = 1;
-
-		for (long long searchMin = 1; searchMin <= searchMax; searchMin++) {
-
-			if (target % searchMin == 0) {
-				long long otherFactor = target / searchMin;
-
-				if (isPrime(otherFactor) && otherFactor > answer) {
-					answer = otherFactor;
-				}
-
-				if (isPrime(searchMin) && searchMin > answer) {
-					answer = searchMin;
-				}
-
+			if (isPrime(searchMin) && searchMin > answer) {
+				answer = searchMin;
 			}
 
 		}
 
-		std::cout << "The largest prime factor of: " << target << " is " << answer << std::endl;
-		log("Type and enter 'e' to exit the program. Enter any other character for another number to be calculated. ");
-
-		char testChar;
-		std::cin >> testChar;
-		if (testChar == 'e') {
-			running = false;
-		}
-
-
 	}
+
+	std::cout << "The largest prime factor of: " << target << " is " << answer << std::endl;
+
+	log("Press enter to exit.");
+
+	std::cin.get();
+
+	
 
 	return 0;
 
