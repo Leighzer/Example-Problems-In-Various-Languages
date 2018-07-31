@@ -1,18 +1,27 @@
 import fileinput
+import os.path
 
-
-file = open('PATH TO YOUR GITHUB REPO HERE\series.txt', 'r'); """Not sure how I would use relative paths for opening a file yet on windows"""
+myPath = os.path.abspath(os.path.dirname(__file__))
+pathToData = os.path.join(myPath, "series.txt")
+file = open(pathToData, 'r')
 series = file.readline()
 
-count = 0
 left = 0
 right = 13
 
-print(len(series) - right)
+largestAdjacentProduct = -1
+product = 1
 
 for x in range(0, len(series) - right):
-    """print(len(series[left:right]))"""
+    for y in range(0, len(series[left:right])):
+        sublist = series[left:right]
+        product = product * int(sublist[y])
+    if(product > largestAdjacentProduct):
+            largestAdjacentProduct = product
     left += 1
     right += 1
+    product = 1
+
+print("The largest 13 digit adjacent product in the 1000 digit number in the series.txt file is: " + str(largestAdjacentProduct))
 
 exit
