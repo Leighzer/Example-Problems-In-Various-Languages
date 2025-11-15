@@ -10,12 +10,11 @@ namespace p004
     {
         static void Main(string[] args)
         {
-
             List<int> palindromes = new List<int>();
-            
-            for(int i = 999; i > 0; i--)
+
+            for (int i = 999; i > 0; i--)
             {
-                for(int j = 999; j > 0; j--)
+                for (int j = 999; j > 0; j--)
                 {
                     int product = i * j;
                     if (isPalindrome(product))
@@ -25,12 +24,10 @@ namespace p004
                 }
             }
 
-            palindromes.Sort();            
-            
-            Console.WriteLine("The largest palindrome product of two 3-digit numbers is :" + palindromes[palindromes.Count -1]);
+            palindromes.Sort();
 
+            Console.WriteLine("The largest palindrome product of two 3-digit numbers is :" + palindromes[palindromes.Count - 1]);
             Console.ReadLine();
-
         }
 
         static bool isPalindrome(int number)
